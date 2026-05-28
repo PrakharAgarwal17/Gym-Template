@@ -1,13 +1,10 @@
 function Home() {
   return (
     <section className="w-full h-screen bg-[#f5f5f3] flex flex-col">
-
       {/* MAIN WRAPPER */}
       <div className="max-w-[1500px] mx-auto px-6 pt-16 pb-4 flex flex-col flex-1 min-h-0 w-full">
-
         {/* TOP TEXT */}
         <div className="flex flex-col items-center text-center shrink-0">
-
           <p className="uppercase tracking-[2px] text-[11px] md:text-[12px] font-semibold text-[#222] mb-1">
             Achieve Your Fitness Goals
           </p>
@@ -46,25 +43,15 @@ function Home() {
     md:h-[620px]
     lg:h-[720px]
 
-    mx-2
-    md:mx-10
-    lg:mx-20
+    w-fit
+    mx-auto
   "
 >
-
           {/* IMAGE */}
           <img
             src="https://res.cloudinary.com/dv3nrazpl/image/upload/q_auto/f_auto/v1779920979/ChatGPT_Image_May_28_2026_03_59_08_AM_om8t49.png"
             alt=""
-           className="
-  absolute
-  inset-0
-  w-full
-  h-full
-  object-cover
-  object-center
-"
-          />
+             className="w-[320px] sm:w-[500px] md:w-[760px] lg:w-[980px] h-full object-cover"/>
 
           {/* TOP LIGHT */}
           <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-black/10 z-10" />
@@ -110,7 +97,6 @@ function Home() {
               Elevate Wellness.
             </p>
           </div>
-
         </div>
       </div>
     </section>
