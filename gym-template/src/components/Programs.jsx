@@ -70,23 +70,23 @@ function Plans() {
   const plans = [
     {
       name: "STARTER",
-      monthly: 1499,
-      yearly: 14990,
+      monthly: 59,
+      yearly: 599,
       color: "gray",
       features: ["Gym Access", "Group Classes", "Basic App Access", "Locker Access"]
     },
     {
       name: "PREMIUM",
-      monthly: 2499,
-      yearly: 23990,
+      monthly: 99,
+      yearly: 999,
       popular: true,
       color: "teal",
       features: ["All Starter Features", "2 PT Sessions/Month", "Nutrition Plan", "Unlimited Classes", "Sauna & Steam"]
     },
     {
       name: "ELITE",
-      monthly: 3999,
-      yearly: 35990,
+      monthly: 149,
+      yearly: 1599,
       color: "black",
       features: ["All Premium Features", "Unlimited PT Sessions", "VIP Locker + Towels", "Guest Passes", "Personal Dietitian"]
     }
@@ -128,20 +128,6 @@ function Plans() {
               Monthly
             </button>
 
-            <div className="relative w-28 h-12 mx-2">
-              <div 
-                ref={toggleRef}
-                className="absolute top-1/2 -translate-y-1/2 left-1 w-[calc(50%-4px)] h-10 bg-teal-600 rounded-2xl"
-              />
-              <button
-                onClick={() => handleToggle('yearly')}
-                className={`absolute inset-0 flex items-center justify-center font-semibold transition-all ${billing === 'yearly' ? 'text-white' : 'text-gray-600'}`}
-              >
-                Yearly
-                <span className="text-[10px] ml-1 bg-green-500 text-white px-1.5 py-px rounded">SAVE 20%</span>
-              </button>
-            </div>
-
             <button
               onClick={() => handleToggle('yearly')}
               className={`px-8 py-3 rounded-2xl font-semibold transition-all ${billing === 'yearly' ? 'bg-[#111] text-white' : 'text-gray-600'}`}
@@ -173,12 +159,12 @@ function Plans() {
                   <h3 className="text-3xl font-black uppercase tracking-tight text-[#111]">{plan.name}</h3>
                   
                   <div className="mt-6 flex items-end gap-1">
-                    <span className="text-6xl font-black">₹{price}</span>
+                    <span className="text-6xl font-black">${price}</span>
                     <span className="text-gray-500 pb-2">/month</span>
                   </div>
 
                   {billing === 'yearly' && (
-                    <p className="text-green-600 text-sm mt-1">₹{totalYearly} billed yearly</p>
+                    <p className="text-green-600 text-sm mt-1">${totalYearly} billed yearly</p>
                   )}
                 </div>
 
