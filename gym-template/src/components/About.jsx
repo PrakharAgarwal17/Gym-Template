@@ -121,6 +121,7 @@ function About() {
                 duration-300
                 hover:scale-105
                 shadow-xl
+                mb-10
               "
             >
               
